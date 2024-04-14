@@ -8,6 +8,9 @@ import '../src/styles/global.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
 import ModificaArticolo from './modificaarticolo/ModificaArticolo';
+import CreaArticolo from './components/creaarticolo/CreaArticolo';
+import GestioneColture from './components/gestionecolture/GestioneColture';
+import CreaColtura from './creacoltura/CreaColtura';
 
 
 function App() {
@@ -35,6 +38,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login login={login} isAuthenticated={isAuthenticated} />} />
         <Route path="/modifica-articolo" element={<PrivateRoute component={ModificaArticolo} />} />
+        <Route path="/crea-articolo" element={<PrivateRoute component={CreaArticolo} />} />
+        <Route path="/gestione-colture" element={<PrivateRoute component={GestioneColture} />} />
+        <Route path="/crea-coltura" element={<PrivateRoute component={CreaColtura} />} />
       </Routes>
       <Footer />
     </Router>

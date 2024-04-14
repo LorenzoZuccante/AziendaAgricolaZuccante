@@ -85,7 +85,7 @@ const ModificaArticolo = () => {
         
 
     const handleNewArticle = () => {
-        navigate('/creaarticolo');
+        navigate('/crea-articolo');
     };
 
     return (

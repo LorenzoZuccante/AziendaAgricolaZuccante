@@ -1,0 +1,119 @@
+.navbar-custom {
+    position: fixed !important;
+    top: 40px !important;
+    left: 0;
+    right: 0;
+    z-index: 1030 !important; 
+    height: 70px;
+}
+
+/* Posizionamento assoluto del logo per permettergli di sbordare */
+#logo1 {
+    position: absolute;
+    transform: translateX(-50%);
+    top: -37px;
+    width: 150px;
+    height: auto; 
+    z-index: 1031; 
+    border-radius: 50%;
+}
+
+
+
+.navbar-custom .navbar-collapse {
+    flex-grow: 1; 
+}
+
+.navbar-custom .navbar-nav {
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: space-evenly; 
+    
+}
+
+
+@media (min-width: 768px) {
+    .navbar-custom .nav-link {
+        margin-right: 10px; 
+        margin-left: 10px;  
+    }
+    
+    .navbar-custom .navbar-nav .nav-item:last-child .nav-link {
+        margin-right: 0;
+    }
+}
+
+/* Stili per la navbar collassata */
+@media (max-width: 767px) {
+    .navbar-custom .navbar-nav {
+        flex-direction: column !important;
+    }
+    .navbar-custom .navbar-nav .nav-link {
+        
+        margin-bottom: 8px;
+    }
+    .navbar-custom .navbar-collapse {
+        background-color: #ffc107;
+        flex-basis: 100%;
+        flex-grow: 1;
+        display: none;
+    }
+
+    .navbar-custom .navbar-nav {
+        flex-direction: column !important;
+    }
+    
+    
+
+}
+
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffc107; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1040; 
+}
+
+.close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: #000 !important; 
+}
+
+.menu-item {
+    margin: 20px 0; 
+    color: #ffffff !important; 
+    font-size: 1.5rem; 
+}
+.menu-item:hover {
+    color: black !important;
+}
+
+.menu-logo {
+margin-top: 240px;
+width: 200px;
+border-radius: 50%;
+}
+
+
+.nav-link {
+    color: white !important;
+}
+.nav-link:hover {
+    color: black !important;
+}
+.logout-button {
+    z-index: 1041;
+    position: absolute;
+    top: 16px;
+    right: 5px;
+}

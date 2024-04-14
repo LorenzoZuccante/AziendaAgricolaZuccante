@@ -1,14 +1,14 @@
-.login-modal {
+.login-container {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
+    width: 100%;
+    max-width: 600px; 
+    margin: auto; 
+    margin-top: 200px;
+    margin-bottom: 150px;
+    padding-top: 50px;
 }
 
 .login-header {
@@ -18,13 +18,12 @@
 }
 
 .close-button {
-    background: white;
-    color: red;
+    background: none;
     border-radius: 10px;
+    color: red;
     border: 1px solid red;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
-    
 }
 
 form {
@@ -46,15 +45,15 @@ button {
     background-color: #0056b3;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button:hover {
+.close-button:hover {
     background-color: red;
-    color: white;
     border: 1px solid red;
+    color: white;
 }
 
 .error {

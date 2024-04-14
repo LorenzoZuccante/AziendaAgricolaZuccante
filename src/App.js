@@ -4,7 +4,10 @@ import Navigationbar from './components/nav/Navbar';
 import Login from './components/login/Login';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
+import '../src/styles/global.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PrivateRoute from './components/privateRoute/PrivateRoute';
+import ModificaArticolo from './modificaarticolo/ModificaArticolo';
 
 
 function App() {
@@ -31,6 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login login={login} isAuthenticated={isAuthenticated} />} />
+        <Route path="/modifica-articolo" element={<PrivateRoute component={ModificaArticolo} />} />
       </Routes>
       <Footer />
     </Router>

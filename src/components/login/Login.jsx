@@ -39,7 +39,7 @@ const Login = ({ login, isAuthenticated }) => {
     };
 
     return (
-        <div className="login-modal">
+        <div className="login-container">
             <div className="login-header">
                 <h2>Login</h2>
                 <button onClick={() => navigate('/')} className="close-button">&times;</button>

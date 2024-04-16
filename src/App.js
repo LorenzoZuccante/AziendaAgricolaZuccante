@@ -47,7 +47,7 @@ function App() {
         <Route path="/crea-articolo" element={<PrivateRoute component={CreaArticolo} />} />
         <Route path="/gestione-colture" element={<PrivateRoute component={GestioneColture} />} />
         <Route path="/crea-coltura" element={<PrivateRoute component={CreaColtura} />} />
-        <Route path="/gestione-previsoni" element={<PrivateRoute component={GestionePrevisioni} />} />
+        <Route path="/gestione-previsioni" element={<PrivateRoute component={GestionePrevisioni} />} />
         <Route path="/crea-previsione" element={<PrivateRoute component={CreaPrevisione} />} />
         <Route path="/gestione-sviluppo" element={<PrivateRoute component={GestioneSviluppo} />} />
         <Route path="/crea-sviluppo" element={<PrivateRoute component={CreaSviluppo} />} />

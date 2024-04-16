@@ -54,7 +54,7 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                     <LinkContainer to="/gestione-colture">
                       <NavDropdown.Item>Gestione Colture</NavDropdown.Item>
                     </LinkContainer>
-                    <LinkContainer to="/gestione-previsoni">
+                    <LinkContainer to="/gestione-previsioni">
                       <NavDropdown.Item>Gestione Previsioni</NavDropdown.Item>
                     </LinkContainer>
                     <LinkContainer to="/gestione-sviluppo">

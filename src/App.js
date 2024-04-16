@@ -7,10 +7,10 @@ import Footer from './components/footer/Footer';
 import '../src/styles/global.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
-import ModificaArticolo from './modificaarticolo/ModificaArticolo';
+import ModificaArticolo from './components/modificaarticolo/ModificaArticolo';
 import CreaArticolo from './components/creaarticolo/CreaArticolo';
 import GestioneColture from './components/gestionecolture/GestioneColture';
-import CreaColtura from './creacoltura/CreaColtura';
+import CreaColtura from './components/creacoltura/CreaColtura';
 import GestionePrevisioni from './components/gestioneprevisoni/GestionePrevisioni';
 import CreaPrevisione from './components/creaprevisone/CreaPrevisione';
 import GestioneSviluppo from './components/gestionesviluppo/GestioneSviluppo';
@@ -48,7 +48,7 @@ function App() {
         <Route path="/gestione-colture" element={<PrivateRoute component={GestioneColture} />} />
         <Route path="/crea-coltura" element={<PrivateRoute component={CreaColtura} />} />
         <Route path="/gestione-previsoni" element={<PrivateRoute component={GestionePrevisioni} />} />
-        <Route path="/crea-previsone" element={<PrivateRoute component={CreaPrevisione} />} />
+        <Route path="/crea-previsione" element={<PrivateRoute component={CreaPrevisione} />} />
         <Route path="/gestione-sviluppo" element={<PrivateRoute component={GestioneSviluppo} />} />
         <Route path="/crea-sviluppo" element={<PrivateRoute component={CreaSviluppo} />} />
         <Route path="/gestione-produzioni" element={<PrivateRoute component={GestioneProduzioni} />} />

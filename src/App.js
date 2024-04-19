@@ -26,6 +26,7 @@ import Brassiche from './components/brassiche/Brassiche';
 import Finocchio from './components/finocchio/Finocchio';
 import Cocomero from './components/cocomero/Cocomero';
 import Melone from './components/melone/Melone';
+import Galleria from './components/galleria/Galleria';
 
 
 function App() {
@@ -71,7 +72,7 @@ function App() {
         <Route path="/finocchio" element={<Finocchio />} />
         <Route path="/cocomero" element={<Cocomero />} />
         <Route path="/melone" element={<Melone />} />
-        
+        <Route path="/galleria" element={<Galleria />} />
       </Routes>
       <Footer />
     </Router>

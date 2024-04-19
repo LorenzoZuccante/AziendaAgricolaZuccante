@@ -26,6 +26,9 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
               <>
                 <Nav className="me-auto">
                   <NavDropdown title="Applicativo" id="basic-nav-dropdown-left">
+                  <LinkContainer to="/">
+                  <Nav.Link>Home</Nav.Link>
+                </LinkContainer>
                     <LinkContainer to="/chisiamo">
                       <NavDropdown.Item>Chi siamo</NavDropdown.Item>
                     </LinkContainer>
@@ -48,9 +51,6 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
         </NavDropdown>
                     <LinkContainer to="/filiera">
                       <NavDropdown.Item>Filiera</NavDropdown.Item>
-                    </LinkContainer>
-                    <LinkContainer to="/incampo">
-                      <NavDropdown.Item>In campo</NavDropdown.Item>
                     </LinkContainer>
                     <LinkContainer to="/contatti">
                       <NavDropdown.Item>Contatti</NavDropdown.Item>
@@ -84,7 +84,10 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                 </Nav>
               </>
             ) : (
-              <Nav className="m-auto">
+              <Nav className="mt-auto">
+                                <LinkContainer to="/">
+                  <Nav.Link>Home</Nav.Link>
+                </LinkContainer>
                 <LinkContainer to="/chisiamo">
                   <Nav.Link>Chi siamo</Nav.Link>
                 </LinkContainer>
@@ -105,14 +108,11 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                 <NavDropdown.Item>Melone</NavDropdown.Item>
             </LinkContainer>
             </NavDropdown>
-                <LinkContainer to="/filiera">
-                  <Nav.Link>Filiera</Nav.Link>
-                </LinkContainer>
                 <Navbar.Brand href="/" className="mx-auto">
                   <img src={logo} alt="Logo" id="logo1" />
                 </Navbar.Brand>
-                <LinkContainer to="/incampo">
-                  <Nav.Link>In campo</Nav.Link>
+                <LinkContainer to="/filiera">
+                  <Nav.Link>Filiera</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/contatti">
                   <Nav.Link>Contatti</Nav.Link>

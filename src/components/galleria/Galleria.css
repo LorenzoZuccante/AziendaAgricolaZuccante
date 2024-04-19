@@ -1,0 +1,48 @@
+.galleria-container {
+    margin-top: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 16px; 
+    background-color: #ffc107;
+    border-radius: 20px;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.miniature-img {
+    flex: 1 1 150px; 
+    max-width: 300px; 
+    height: auto;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    margin: 20px;
+}
+.h2iamo {
+    color: white;
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    margin-top: 10px;
+}  
+
+
+@media (max-width: 768px) {
+    .miniature-img {
+        flex-basis: 100%; 
+    }
+}
+
+.modal-carousel .modal-content {
+    background: #ffc107;
+    color: white;
+}
+
+.modal-carousel img {
+    height: 80vh;
+    object-fit: cover;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

@@ -22,7 +22,7 @@ const CreaArticolo = () => {
         .then(response => {
             if (response.ok) {
                 alert('Articolo creato con successo!');
-                navigate('/modifica-articolo');
+                navigate('/gestione-articolo');
             } else {
                 alert('Errore nella creazione dell\'articolo');
                 return response.json().then(data => {

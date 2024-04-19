@@ -29,9 +29,23 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                     <LinkContainer to="/chisiamo">
                       <NavDropdown.Item>Chi siamo</NavDropdown.Item>
                     </LinkContainer>
-                    <LinkContainer to="/prodotti">
-                      <NavDropdown.Item>Prodotti</NavDropdown.Item>
-                    </LinkContainer>
+                    <NavDropdown title="Prodotti" id="nav-dropdown-prodotti">
+            <LinkContainer to="/carciofo">
+                <NavDropdown.Item>Carciofo</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/brassicaceae">
+                <NavDropdown.Item>Brassicaceae</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/finocchio">
+                <NavDropdown.Item>Finocchio</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/cocomero">
+                <NavDropdown.Item>Cocomero</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/melone">
+                <NavDropdown.Item>Melone</NavDropdown.Item>
+            </LinkContainer>
+        </NavDropdown>
                     <LinkContainer to="/filiera">
                       <NavDropdown.Item>Filiera</NavDropdown.Item>
                     </LinkContainer>
@@ -74,9 +88,23 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                 <LinkContainer to="/chisiamo">
                   <Nav.Link>Chi siamo</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/prodotti">
-                  <Nav.Link>Prodotti</Nav.Link>
-                </LinkContainer>
+                <NavDropdown title="Prodotti" id="nav-dropdown-prodotti1">
+            <LinkContainer to="/carciofo">
+                <NavDropdown.Item>Carciofo</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/brassicaceae">
+                <NavDropdown.Item>Brassicaceae</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/finocchio">
+                <NavDropdown.Item>Finocchio</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/cocomero">
+                <NavDropdown.Item>Cocomero</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/melone">
+                <NavDropdown.Item>Melone</NavDropdown.Item>
+            </LinkContainer>
+            </NavDropdown>
                 <LinkContainer to="/filiera">
                   <Nav.Link>Filiera</Nav.Link>
                 </LinkContainer>
@@ -96,10 +124,10 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
             )}
           </Navbar.Collapse>
           {isAuthenticated && (
-            <Button variant="outline-danger" onClick={handleLogout} className="logout-button">
-              Logout
-            </Button>
-          )}
+  <Button variant="outline-danger" onClick={handleLogout} className="logout-button">
+    <i className="bi bi-box-arrow-right"></i> Logout
+  </Button>
+)}
         </Container>
       </Navbar>
       <FullScreenMenu show={expanded} closeMenu={() => setExpanded(false)} isAuthenticated={isAuthenticated} />

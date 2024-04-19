@@ -17,6 +17,15 @@ import GestioneSviluppo from './components/gestionesviluppo/GestioneSviluppo';
 import CreaSviluppo from './components/creasviluppo/CreaSviluppo';
 import GestioneProduzioni from './components/gestioneproduzioni/GestioneProduzioni';
 import CreaProduzione from './components/creaproduzione/CreaProduzione';
+import ChiSiamo from './components/chisiamo/ChiSiamo';
+import ScrollToTop from './components/scrolltotop/ScrollToTop';
+import Filiera from './components/filiera/Filiera';
+import Contatti from './components/Contatti/Contatti';
+import Carciofo from './components/carciofo/Carciofo';
+import Brassiche from './components/brassiche/Brassiche';
+import Finocchio from './components/finocchio/Finocchio';
+import Cocomero from './components/cocomero/Cocomero';
+import Melone from './components/melone/Melone';
 
 
 function App() {
@@ -40,6 +49,7 @@ function App() {
   return (
     <Router>
       <Navigationbar isAuthenticated={isAuthenticated} logout={logout} />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login login={login} isAuthenticated={isAuthenticated} />} />
@@ -53,6 +63,15 @@ function App() {
         <Route path="/crea-sviluppo" element={<PrivateRoute component={CreaSviluppo} />} />
         <Route path="/gestione-produzioni" element={<PrivateRoute component={GestioneProduzioni} />} />
         <Route path="/crea-produzione" element={<PrivateRoute component={CreaProduzione} />} />
+        <Route path="/chisiamo" element={<ChiSiamo />} />
+        <Route path="/filiera" element={<Filiera />} />
+        <Route path="/contatti" element={<Contatti />} />
+        <Route path="/carciofo" element={<Carciofo />} />
+        <Route path="/brassicaceae" element={<Brassiche />} />
+        <Route path="/finocchio" element={<Finocchio />} />
+        <Route path="/cocomero" element={<Cocomero />} />
+        <Route path="/melone" element={<Melone />} />
+        
       </Routes>
       <Footer />
     </Router>

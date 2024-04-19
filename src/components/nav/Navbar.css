@@ -103,8 +103,12 @@ margin-top: 240px;
 width: 200px;
 border-radius: 50%;
 }
-
-
+#nav-dropdown-prodotti {
+    color: black !important;
+}
+#nav-dropdown-prodotti2 {
+    color: black !important;
+}
 .nav-link {
     color: white !important;
 }

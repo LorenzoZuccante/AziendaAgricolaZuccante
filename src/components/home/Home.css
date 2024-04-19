@@ -1,3 +1,57 @@
-.home {
-    margin-top: 150px;
+.backgroundHolder {
+    background-image: url('../../assets/aprire-azienda-agricola.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100%; 
+    min-height: 700px;
+    box-shadow: 0 8px 6px -6px black; 
 }
+.backgroundHolder h1 {
+    padding-top: 300px;
+    color: #F2E9C0;
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+}
+.contentDiv1 {
+margin: 0 5% 0 5%;
+background-color: #ffc107;
+border-radius: 20px;
+padding: 1%;
+box-shadow: 0 8px 6px -6px black;
+}
+.contentDiv1 h2 {
+    color: white;
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    
+}
+.contentDiv1 p {
+    color: white;;
+    font-size: 1.2em;
+    margin: 5%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.customButton {
+    background-color: #76a03f !important; 
+    color: white !important; 
+    font-weight: bold !important; 
+    padding: 10px 20px !important; 
+    border: none !important; 
+    border-radius: 10px 0 10px 0 !important; 
+    box-shadow: 0 8px 6px -6px black !important;
+    transition: background-color 0.3s ease !important; 
+  }
+  
+  .customButton:hover {
+    background-color: #5d8030 !important;
+    color: #fff !important; 
+  }
+  

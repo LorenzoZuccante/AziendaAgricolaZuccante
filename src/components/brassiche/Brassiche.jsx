@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 import './Brassiche.css';
-import placeholderImg from '../../assets/FilieraImg1.jpg';
+import carciofo from '../../assets/cassabroccolo.jpg';
+import cassa from '../../assets/broccolo.jpg';
+import campo from '../../assets/Cavolfiorebianco.webp';
+import mazzo from '../../assets/cestomisto.jpg';
+import bello from '../../assets/todis.webp';
 
 const Brassiche = () => {
   const [articles, setArticles] = useState({});
@@ -18,6 +22,13 @@ const Brassiche = () => {
     1020: "Cavolfiore bianco",
     1021: "Valori nutrizionali",
     1022: "Conservazione"
+  };
+  const images = {
+    1008: carciofo,
+    1019: cassa,
+    1020: campo,
+    1021: mazzo,
+    1022: bello
   };
 
   const fetchArticles = async () => {
@@ -57,7 +68,7 @@ const Brassiche = () => {
 
   return (
     <Container fluid className="carciofo p-0">
-      <div className='photoHolder'><h1 className='text-center'>BRASSICHE</h1></div>
+      <div className='photoHolder4'><h1 className='text-center'>BRASSICHE</h1></div>
       <div className='content-section'>
         {Object.entries(articles).map(([id, article], index) => (
           <Row key={id} className="justify-content-center m-0 article-row align-items-center">
@@ -68,13 +79,13 @@ const Brassiche = () => {
                   <p className='section-content'>{article.Contenuto}</p>
                 </Col>
                 <Col md={6} className="image-content animated-right">
-                  <div className="image-circle" style={{ backgroundImage: `url(${placeholderImg})` }}></div>
+                  <div className="image-circle" style={{ backgroundImage: `url(${images[id]})` }}></div>
                 </Col>
               </>
             ) : (
               <>
                 <Col md={6} className="image-content animated-left">
-                  <div className="image-circle" style={{ backgroundImage: `url(${placeholderImg})` }}></div>
+                  <div className="image-circle" style={{ backgroundImage: `url(${images[id]})` }}></div>
                 </Col>
                 <Col md={6} className="text-content animated-right">
                   <h2 className='h2iamo'>{titles[id]}</h2>

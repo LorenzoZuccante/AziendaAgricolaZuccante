@@ -27,7 +27,7 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                 <Nav className="me-auto">
                   <NavDropdown title="Applicativo" id="basic-nav-dropdown-left">
                   <LinkContainer to="/">
-                  <Nav.Link>Home</Nav.Link>
+                  <NavDropdown.Item>Home</NavDropdown.Item>
                 </LinkContainer>
                     <LinkContainer to="/chisiamo">
                       <NavDropdown.Item>Chi siamo</NavDropdown.Item>

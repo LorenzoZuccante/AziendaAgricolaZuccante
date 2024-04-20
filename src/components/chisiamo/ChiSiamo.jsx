@@ -28,7 +28,7 @@ const ChiSiamo = () => {
 
   return (
     <Container fluid className="chi-siamo p-0">
-      <div className='photoHolder'><h1 className='text-center'>CHI SIAMO</h1></div>
+      <div className='photoHolder1'><h1 className='text-center'>CHI SIAMO</h1></div>
   <div className='ciccio'>
         <Row className="justify-content-center m-0 article-row align-items-center">
           <Col md={6} className="text-content animated-left">

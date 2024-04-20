@@ -9,8 +9,8 @@
     padding: 1%;
     box-shadow: 0 8px 6px -6px black;
 }
-.photoHolder {
-    background-image: url('../../assets/IMG-20240416-WA0001.jpg');
+.photoHolder1 {
+    background-image: url('../../assets/16ca.jpg') !important;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@
     box-shadow: 0 8px 6px -6px black;
     margin-bottom: 100px;
 }
-.photoHolder h1 {
+.photoHolder1 h1 {
     padding-top: 300px;
     color: #F2E9C0;
     font-family: "Titan One", sans-serif;

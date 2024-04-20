@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 import './Melone.css';
-import placeholderImg from '../../assets/FilieraImg1.jpg';
+import carciofo from '../../assets/melbins1.jpg';
+import cassa from '../../assets/melcassa1.jpg';
+import campo from '../../assets/melimp.jpg';
 
 const Melone = () => {
   const [articles, setArticles] = useState({});
@@ -17,6 +19,11 @@ const Melone = () => {
     1030: "Francesino",
     1031: "Polpa rossa"
     
+  };
+  const images = {
+    1011: carciofo,
+    1030: cassa,
+    1031: campo
   };
 
   const fetchArticles = async () => {
@@ -56,7 +63,7 @@ const Melone = () => {
 
   return (
     <Container fluid className="carciofo p-0">
-      <div className='photoHolder'><h1 className='text-center'>MELONE</h1></div>
+      <div className='photoHolder8'><h1 className='text-center'>MELONE</h1></div>
       <div className='content-section'>
         {Object.entries(articles).map(([id, article], index) => (
           <Row key={id} className="justify-content-center m-0 article-row align-items-center">
@@ -67,13 +74,13 @@ const Melone = () => {
                   <p className='section-content'>{article.Contenuto}</p>
                 </Col>
                 <Col md={6} className="image-content animated-right">
-                  <div className="image-circle" style={{ backgroundImage: `url(${placeholderImg})` }}></div>
+                  <div className="image-circle" style={{ backgroundImage: `url(${images[id]})` }}></div>
                 </Col>
               </>
             ) : (
               <>
                 <Col md={6} className="image-content animated-left">
-                  <div className="image-circle" style={{ backgroundImage: `url(${placeholderImg})` }}></div>
+                  <div className="image-circle" style={{ backgroundImage: `url(${images[id]})` }}></div>
                 </Col>
                 <Col md={6} className="text-content animated-right">
                   <h2 className='h2iamo'>{titles[id]}</h2>

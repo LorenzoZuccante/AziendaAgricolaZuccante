@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 import './Finocchio.css';
-import placeholderImg from '../../assets/FilieraImg1.jpg';
+import carciofo from '../../assets/finocchio.jpg';
+import cassa from '../../assets/cassafinocchi.jpg';
+import campo from '../../assets/pedanafinocchi.jpg';
+import mazzo from '../../assets/finocchiotagliato.jpg';
 
 const Finocchio = () => {
   const [articles, setArticles] = useState({});
@@ -18,6 +21,12 @@ const Finocchio = () => {
     1024: "Conservazione",
     1025: "In conclusione"
     
+  };
+  const images = {
+    1009: carciofo,
+    1023: cassa,
+    1024: campo,
+    1025: mazzo
   };
 
   const fetchArticles = async () => {
@@ -57,7 +66,7 @@ const Finocchio = () => {
 
   return (
     <Container fluid className="carciofo p-0">
-      <div className='photoHolder'><h1 className='text-center'>FINOCCHIO</h1></div>
+      <div className='photoHolder5'><h1 className='text-center'>FINOCCHIO</h1></div>
       <div className='content-section'>
         {Object.entries(articles).map(([id, article], index) => (
           <Row key={id} className="justify-content-center m-0 article-row align-items-center">
@@ -68,13 +77,13 @@ const Finocchio = () => {
                   <p className='section-content'>{article.Contenuto}</p>
                 </Col>
                 <Col md={6} className="image-content animated-right">
-                  <div className="image-circle" style={{ backgroundImage: `url(${placeholderImg})` }}></div>
+                  <div className="image-circle" style={{ backgroundImage: `url(${images[id]})` }}></div>
                 </Col>
               </>
             ) : (
               <>
                 <Col md={6} className="image-content animated-left">
-                  <div className="image-circle" style={{ backgroundImage: `url(${placeholderImg})` }}></div>
+                  <div className="image-circle" style={{ backgroundImage: `url(${images[id]})` }}></div>
                 </Col>
                 <Col md={6} className="text-content animated-right">
                   <h2 className='h2iamo'>{titles[id]}</h2>

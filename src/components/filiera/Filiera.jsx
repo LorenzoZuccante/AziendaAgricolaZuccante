@@ -31,7 +31,7 @@ const Filiera = () => {
 
   return (
     <Container fluid className="filiera p-0">
-      <div className='photoHolder'><h1 className='text-center'>FILIERA</h1></div>
+      <div className='photoHolder2'><h1 className='text-center'>FILIERA</h1></div>
       <div className='content-section'>
         <Row className="justify-content-center m-0 article-row align-items-center">
           <Col md={6} className="text-content animated-left">

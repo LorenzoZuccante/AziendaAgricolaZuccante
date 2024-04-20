@@ -11,8 +11,8 @@
     box-shadow: 0 8px 6px -6px black;
 }
 
-.photoHolder {
-    background-image: url('../../assets/FilieraBackground.jpg');
+.photoHolder5 {
+    background-image: url('../../assets/campofinocchi.jpg') !important;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@
     margin-bottom: 100px;
 }
 
-.photoHolder h1 {
+.photoHolder5 h1 {
     padding-top: 300px;
     color: #F2E9C0;
     font-family: "Titan One", sans-serif;

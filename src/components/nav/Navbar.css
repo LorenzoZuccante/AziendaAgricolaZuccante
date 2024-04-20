@@ -99,12 +99,18 @@
 }
 
 .menu-logo {
-margin-top: 100px;
+margin-top: 10px;
 width: 200px;
 border-radius: 50%;
 }
-
-
+#nav-dropdown-prodotti {
+    color: black !important;
+}
+@media screen and (max-height: 767px) {
+    #nav-dropdown-prodotti {
+        color: white !important;
+    }
+}
 #nav-dropdown-prodotti2 {
     color: black !important;
 }
@@ -121,7 +127,7 @@ border-radius: 50%;
     right: 5px;
 }
 .eproviamo {
-    margin-top: 30px !important;
+    
     padding: 8px;
     font-size: 1.3em !important;
     color: white !important;

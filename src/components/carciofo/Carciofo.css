@@ -11,8 +11,8 @@
     box-shadow: 0 8px 6px -6px black;
 }
 
-.photoHolder {
-    background-image: url('../../assets/FilieraBackground.jpg');
+.photoHolder3 {
+    background-image: url('../../assets/campo-di-carciofi.jpg') !important;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -22,8 +22,8 @@
     margin-bottom: 100px;
 }
 
-.photoHolder h1 {
-    padding-top: 300px;
+.photoHolder3 h1 {
+    padding-top: 330px !important;
     color: #F2E9C0;
     font-family: "Titan One", sans-serif;
     font-weight: 400;

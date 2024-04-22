@@ -144,3 +144,15 @@ border-radius: 50%;
 .eproviamo3 {
     font-size: 1.3em !important; 
 }
+.pippo:hover {
+background-color:#5d8030 !important;
+}
+.pippo:active {
+background-color:#5d8030 !important;
+}
+.pippo:focus{
+background-color:#5d8030 !important;
+}
+.pippo:scope {
+background-color:#5d8030 !important;
+}

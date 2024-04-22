@@ -30,7 +30,7 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                   <NavDropdown.Item>Home</NavDropdown.Item>
                 </LinkContainer>
                     <LinkContainer to="/chisiamo">
-                      <NavDropdown.Item>Chi siamo</NavDropdown.Item>
+                      <NavDropdown.Item >Chi siamo</NavDropdown.Item>
                     </LinkContainer>
                     <NavDropdown title="Prodotti" id="nav-dropdown-prodotti">
             <LinkContainer to="/carciofo">
@@ -93,7 +93,7 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                 </LinkContainer>
                 <NavDropdown title="Prodotti" id="nav-dropdown-prodotti1">
             <LinkContainer to="/carciofo">
-                <NavDropdown.Item>Carciofo</NavDropdown.Item>
+                <NavDropdown.Item className="pippo">Carciofo</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/brassicaceae">
                 <NavDropdown.Item>Brassicaceae</NavDropdown.Item>

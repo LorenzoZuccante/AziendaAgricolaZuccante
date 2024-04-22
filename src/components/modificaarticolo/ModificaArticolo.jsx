@@ -90,6 +90,7 @@ const ModificaArticolo = () => {
 
     return (
         <div className="container mt-5 firstdiv">
+            <h1>Gestione articolo</h1>
         <div className="form-group">
             <label htmlFor="selectArticolo">Seleziona un articolo</label>
             <select id="selectArticolo" className="form-control" onChange={handleSelectChange} value={selectedArticolo?.ArticoloID || ''}>

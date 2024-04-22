@@ -1,16 +1,47 @@
 .footer {
-    background-color: #ffc107; 
+    background-color: #ffc107;
     padding: 20px 0;
-    margin-top: 40px; 
+    color: white;
+    margin-top: 30px;
 }
 
-.footer a {
-    color: white; 
-    margin: 0 10px;
-    text-decoration: none;
+.footer-logo {
+    max-width: 150px; /* Regola a seconda delle dimensioni del tuo logo */
+    margin-bottom: 10px;
+    border-radius: 50%;
 }
 
-.footer a:hover {
-    text-decoration: none;
-    color: black; 
+.privacy-link {
+    display: block; /* rende il link un blocco per il clic più facile */
+    margin: 10px 0;
+    color: white;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+    color: #e4405f
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.instagram-icon {
+    color: white;
+    margin-left: 10px;
+}
+
+.instagram-icon:hover {
+    color: #e4405f;
+}
+
+@media (max-width: 767px) {
+    .footer a,
+    .footer-logo {
+        margin-bottom: 15px;
+    }
+
+    .footer-logo {
+        max-width: 100px;
+    }
 }

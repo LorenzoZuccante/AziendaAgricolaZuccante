@@ -78,6 +78,7 @@ const GestioneColture = () => {
 
     return (
         <div className="container mt-5 terdiv">
+            <h1>Gestione Colture</h1>
             <div className="form-group">
                 <label htmlFor="selectColtura">Seleziona una Coltura</label>
                 <select id="selectColtura" className="form-control" onChange={handleSelectChange} value={selectedColtura?.ColturaID || ''}>

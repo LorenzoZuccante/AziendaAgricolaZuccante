@@ -86,7 +86,7 @@ const FullScreenMenu = ({ show, closeMenu, isAuthenticated }) => {
           <LinkContainer to="/chisiamo" onClick={closeMenu}>
             <Nav.Link className="eproviamo">Chi siamo</Nav.Link>
           </LinkContainer>
-          <NavDropdown title="Prodotti" className="eproviamo" id="nav-dropdown-prodotti">
+          <NavDropdown title="Prodotti" className="eproviamo" id="nav-dropdown-prodotti4">
             <LinkContainer to="/carciofo" onClick={closeMenu}>
               <NavDropdown.Item className="eproviamo2">Carciofo</NavDropdown.Item>
             </LinkContainer>

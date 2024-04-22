@@ -8,6 +8,7 @@ const ChiSiamo = () => {
   const [articolo1005, setArticolo1005] = useState({});
   const [articolo1013, setArticolo1013] = useState({});
 
+
   useEffect(() => {
     const fetchArticolo = async (id, setArticolo) => {
       try {

@@ -27,6 +27,7 @@ import Finocchio from './components/finocchio/Finocchio';
 import Cocomero from './components/cocomero/Cocomero';
 import Melone from './components/melone/Melone';
 import Galleria from './components/galleria/Galleria';
+import PrivacyPolicy from './components/privacypolicy/PrivacyPolicy';
 
 
 function App() {
@@ -73,6 +74,7 @@ function App() {
         <Route path="/cocomero" element={<Cocomero />} />
         <Route path="/melone" element={<Melone />} />
         <Route path="/galleria" element={<Galleria />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </Router>

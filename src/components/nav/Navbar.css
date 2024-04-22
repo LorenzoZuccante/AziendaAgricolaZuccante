@@ -103,13 +103,17 @@ margin-top: 10px;
 width: 200px;
 border-radius: 50%;
 }
-#nav-dropdown-prodotti {
-    color: black !important;
-}
+
 @media screen and (max-height: 767px) {
     #nav-dropdown-prodotti {
-        color: white !important;
+        color: white ;
     }
+}
+#nav-dropdown-prodotti {
+    color: black !important ;
+}
+#nav-dropdown-prodotti4 {
+    color: white!important ;
 }
 #nav-dropdown-prodotti2 {
     color: black !important;

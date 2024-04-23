@@ -15,14 +15,24 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
     logout();
     navigate('/');
   };
+  const [activeKey, setActiveKey] = useState("");
 
+const handleSelect = (eventKey) => {
+  setActiveKey(eventKey);
+};
   return (
     <>
       <Navbar bg="warning" expand="md" sticky="top" className="navbar-custom">
         <Container>
+            
           <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded => !expanded)} />
+          <Navbar.Brand href="/" className="mx-auto">
+          <img src={logo} alt="Logo" id="logo12" />
+        </Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav">
+            
             {isAuthenticated ? (
+              
               <>
                 <Nav className="me-auto">
                   <NavDropdown title="Applicativo" id="basic-nav-dropdown-left">
@@ -84,6 +94,7 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                 </Nav>
               </>
             ) : (
+              
               <Nav className="mt-auto">
                                 <LinkContainer to="/">
                   <Nav.Link>Home</Nav.Link>
@@ -91,21 +102,21 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
                 <LinkContainer to="/chisiamo">
                   <Nav.Link>Chi siamo</Nav.Link>
                 </LinkContainer>
-                <NavDropdown title="Prodotti" id="nav-dropdown-prodotti1">
+                <NavDropdown title="Prodotti" onSelect={handleSelect} id="nav-dropdown-prodotti1">
             <LinkContainer to="/carciofo">
-                <NavDropdown.Item className="pippo">Carciofo</NavDropdown.Item>
+                <NavDropdown.Item eventKey="carciofo" className={`pippo ${activeKey === "carciofo" ? "pippo1" : ""}`}>Carciofo</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/brassicaceae">
-                <NavDropdown.Item>Brassicaceae</NavDropdown.Item>
+                <NavDropdown.Item eventKey="brassicaceae" className={`pippo ${activeKey === "brassicaceae" ? "pippo1" : ""}`}>Brassicaceae</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/finocchio">
-                <NavDropdown.Item>Finocchio</NavDropdown.Item>
+                <NavDropdown.Item eventKey="finocchio" className={`pippo ${activeKey === "finocchio" ? "pippo1" : ""}`}>Finocchio</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/cocomero">
-                <NavDropdown.Item>Cocomero</NavDropdown.Item>
+                <NavDropdown.Item eventKey="cocomero" className={`pippo ${activeKey === "cocomero" ? "pippo1" : ""}`}>Cocomero</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/melone">
-                <NavDropdown.Item>Melone</NavDropdown.Item>
+                <NavDropdown.Item eventKey="melone" className={`pippo ${activeKey === "melone" ? "pippo1" : ""}`}>Melone</NavDropdown.Item>
             </LinkContainer>
             </NavDropdown>
                 <Navbar.Brand href="/" className="mx-auto">
@@ -125,7 +136,7 @@ const NavigationBar = ({ isAuthenticated, logout }) => {
           </Navbar.Collapse>
           {isAuthenticated && (
   <Button variant="outline-danger" onClick={handleLogout} className="logout-button">
-    <i className="bi bi-box-arrow-right"></i> Logout
+    <i className="bi bi-box-arrow-right"></i>
   </Button>
 )}
         </Container>

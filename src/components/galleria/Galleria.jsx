@@ -122,40 +122,40 @@ const Galleria = () => {
 
     return (
         <Container className="galleria-container">
-            <h1 className='h2iamo'>Alcuni nostri scatti</h1>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+    <h1 className='h2iamo text-center'>Alcuni nostri scatti</h1>
+    <div className="gallery-grid">
+        {images.map((img, index) => (
+            <Image
+                key={index}
+                src={img.src}
+                alt={img.alt}
+                thumbnail
+                onClick={() => handleShow(index)}
+                className="gallery-image"
+            />
+        ))}
+    </div>
+
+    <Modal show={show} onHide={handleClose} size="lg" centered className="modal-carousel">
+        <Modal.Header closeButton>
+            <Modal.Title>{images[selectedIndex].alt}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <Carousel activeIndex={selectedIndex} onSelect={(selectedIndex, e) => setSelectedIndex(selectedIndex)}>
                 {images.map((img, index) => (
-                    <div key={index} style={{ flex: '1 1 150px', maxWidth: '300px' }}>
-                        <Image
+                    <Carousel.Item key={index}>
+                        <img
+                            className="d-block w-100"
                             src={img.src}
                             alt={img.alt}
-                            thumbnail
-                            onClick={() => handleShow(index)}
-                            className="cursor-pointer miniature-img"
                         />
-                    </div>
+                    </Carousel.Item>
                 ))}
-            </div>
+            </Carousel>
+        </Modal.Body>
+    </Modal>
+</Container>
 
-            <Modal show={show} onHide={handleClose} size="lg" centered className="modal-carousel">
-                <Modal.Header closeButton>
-                    <Modal.Title>{images[selectedIndex].alt}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Carousel activeIndex={selectedIndex} onSelect={(selectedIndex, e) => setSelectedIndex(selectedIndex)}>
-                        {images.map((img, index) => (
-                            <Carousel.Item key={index}>
-                                <img
-                                    className="d-block w-100"
-                                    src={img.src}
-                                    alt={img.alt}
-                                />
-                            </Carousel.Item>
-                        ))}
-                    </Carousel>
-                </Modal.Body>
-            </Modal>
-        </Container>
     );
 };
 

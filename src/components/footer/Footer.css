@@ -15,6 +15,7 @@
     display: block; /* rende il link un blocco per il clic più facile */
     margin: 10px 0;
     color: white;
+    text-decoration: none;
 }
 
 .privacy-link:hover {

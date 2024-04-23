@@ -1,35 +1,42 @@
 .galleria-container {
     margin-top: 160px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    gap: 16px; 
+    padding: 20px;
     background-color: #ffc107;
     border-radius: 20px;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px rgb(193, 188, 188);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.miniature-img {
-    flex: 1 1 150px; 
-    max-width: 300px; 
-    height: auto;
-    aspect-ratio: 1 / 1; 
-    object-fit: cover;
-    margin: 20px;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Adjust based on your design */
+    margin: 20px auto;
 }
+
+.gallery-image {
+    width: 100%;
+    height: 150px; /* Fixed height for all images */
+    object-fit: cover;
+}
+
 .h2iamo {
     color: white;
     font-family: "Titan One", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 2em;
-    margin-top: 10px;
-}  
-
+    margin-bottom: 20px;
+}
 
 @media (max-width: 768px) {
-    .miniature-img {
-        flex-basis: 100%; 
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 }
 

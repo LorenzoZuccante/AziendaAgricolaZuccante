@@ -34,7 +34,7 @@ const Footer = () => {
               Contattaci
             </Link>
             <div className="social-icons">
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="instagram-icon">
+              <a href="https://www.instagram.com/az.zuccantemarco/" target="_blank" rel="noopener noreferrer" className="instagram-icon">
                 <Instagram size={24} />
               </a>
             </div>

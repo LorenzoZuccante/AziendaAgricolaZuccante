@@ -4,8 +4,14 @@ import { X } from "react-bootstrap-icons";
 import logo from "../../assets/logo.jpg";
 import { LinkContainer } from "react-router-bootstrap";
 import './Navbar.css';
+import { useLocation } from "react-router-dom";
 
 const FullScreenMenu = ({ show, closeMenu, isAuthenticated }) => {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path;}
+
   useEffect(() => {
     const body = document.body;
     const originalStyle = window.getComputedStyle(body).overflow;
@@ -18,7 +24,9 @@ const FullScreenMenu = ({ show, closeMenu, isAuthenticated }) => {
 
   if (!show) {
     return null;
+
   }
+  
 
   return (
     <div className="fullscreen-menu">
@@ -88,19 +96,19 @@ const FullScreenMenu = ({ show, closeMenu, isAuthenticated }) => {
           </LinkContainer>
           <NavDropdown title="Prodotti" className="eproviamo" id="nav-dropdown-prodotti4">
             <LinkContainer to="/carciofo" onClick={closeMenu}>
-              <NavDropdown.Item className="eproviamo2">Carciofo</NavDropdown.Item>
+              <NavDropdown.Item className={`eproviamo2 pippo ${isActive("/carciofo") ? "pippo1" : ""}`}>Carciofo</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/brassicaceae" onClick={closeMenu}>
-              <NavDropdown.Item className="eproviamo2">Brassicaceae</NavDropdown.Item>
+              <NavDropdown.Item className={`eproviamo2 pippo ${isActive("/brassicaceae") ? "pippo1" : ""}`}>Brassicaceae</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/finocchio" onClick={closeMenu}>
-              <NavDropdown.Item className="eproviamo2">Finocchio</NavDropdown.Item>
+              <NavDropdown.Item className={`eproviamo2 pippo ${isActive("/finocchio") ? "pippo1" : ""}`}>Finocchio</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/cocomero" onClick={closeMenu}>
-              <NavDropdown.Item className="eproviamo2">Cocomero</NavDropdown.Item>
+              <NavDropdown.Item className={`eproviamo2 pippo ${isActive("/cocomero") ? "pippo1" : ""}`}>Cocomero</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/melone" onClick={closeMenu}>
-              <NavDropdown.Item className="eproviamo2">Melone</NavDropdown.Item>
+              <NavDropdown.Item className={`eproviamo2 pippo ${isActive("/melone") ? "pippo1" : ""}`}>Melone</NavDropdown.Item>
             </LinkContainer>
           </NavDropdown>
           <LinkContainer to="/filiera" onClick={closeMenu}>

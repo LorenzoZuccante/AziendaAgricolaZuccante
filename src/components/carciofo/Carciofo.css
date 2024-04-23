@@ -8,7 +8,7 @@
     background-color: #ffc107;
     border-radius: 20px;
     padding: 1%;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px rgb(193, 188, 188);
 }
 
 .photoHolder3 {
@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     width: 100vw; 
     min-height: 700px;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px rgb(193, 188, 188);
     margin-bottom: 100px;
 }
 
